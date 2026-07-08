@@ -59,3 +59,18 @@ if (radial) {
 if (sessionState && !sessionStorage.getItem(bootKey)) sessionState.textContent = 'SESSION: COLD START';
 if (sessionState && sessionStorage.getItem(bootKey)) sessionState.textContent = 'SESSION: WARM';
 if (modules[0]) setActive(modules[0]);
+if (radial && window.innerWidth > 680) {
+  const radius = 250;
+  const positions = [
+    [0, -radius],
+    [radius, 0],
+    [0, radius],
+    [-radius, 0]
+  ];
+  modules.forEach((module, i) => {
+    const [x, y] = positions[i];
+    module.style.left = `calc(50% + ${x}px)`;
+    module.style.top = `calc(50% + ${y}px)`;
+    module.style.transform = 'translate(-50%, -50%)';
+  });
+}
