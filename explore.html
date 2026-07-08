@@ -3,39 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scionexus | Explore</title>
-  <meta name="description" content="Explore the Scionexus sections, features, and content areas." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Scionexus | Explore Transmissions</title>
+  <meta name="description" content="Scionexus Explore page featuring recent transmissions and embedded videos." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">Scionexus</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="lab.html">Lab</a>
-      <a href="explore.html">Explore</a>
-      <a href="scrap.html">Scrap</a>
-      <a href="shop.html">Shop</a>
-    </nav>
-  </header>
-
-  <main class="page">
-    <section class="section">
-      <h1>Explore</h1>
-      <p class="lead">This is a flexible showcase page for categories, content, or featured sections.</p>
-      <div class="grid">
-        <article class="card"><h3>Features</h3><p>Highlight what makes your site useful or unique.</p></article>
-        <article class="card"><h3>Gallery</h3><p>Display images, collections, or visual content.</p></article>
-        <article class="card"><h3>Stories</h3><p>Share posts, announcements, or updates.</p></article>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="bg" aria-hidden="true"><div class="bg__grid"></div><div class="bg__scan"></div><div class="bg__nodes"></div></div>
+  <header class="chrome"><div class="chrome__brand"><div class="logo-mark" aria-hidden="true">S</div><div><div class="chrome__name">SCIONEXUS</div><div class="chrome__sub">VIDEO HEADQUARTERS</div></div></div><a class="chrome__meta mono" href="index.html">RETURN TO CORE</a></header>
+  <main id="content" class="page">
+    <section class="page__hero panel">
+      <div>
+        <div class="kicker mono">RECENT TRANSMISSIONS</div>
+        <h1>EXPLORE</h1>
+        <p class="lede">A responsive transmission bay for the four most recent videos and a direct channel gateway.</p>
       </div>
+      <a class="btn btn--primary" href="https://youtube.com/" target="_blank" rel="noreferrer">OPEN YOUTUBE CHANNEL</a>
+    </section>
+
+    <section class="grid grid--videos">
+      <article class="panel video-card"><div class="video-card__thumb">TRANSMISSION 01</div><h3>Recent Transmission A</h3><p>Placeholder summary for your newest upload.</p></article>
+      <article class="panel video-card"><div class="video-card__thumb">TRANSMISSION 02</div><h3>Recent Transmission B</h3><p>Placeholder summary for your newest upload.</p></article>
+      <article class="panel video-card"><div class="video-card__thumb">TRANSMISSION 03</div><h3>Recent Transmission C</h3><p>Placeholder summary for your newest upload.</p></article>
+      <article class="panel video-card"><div class="video-card__thumb">TRANSMISSION 04</div><h3>Recent Transmission D</h3><p>Placeholder summary for your newest upload.</p></article>
     </section>
   </main>
-
-  <footer class="footer">
-    <p>© 2026 Scionexus</p>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
