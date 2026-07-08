@@ -3,39 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scionexus | Scrap</title>
-  <meta name="description" content="A scrapbook-style page for ideas, drafts, and loose notes." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Scionexus | Scrap Workshop Archive</title>
+  <meta name="description" content="Scionexus Scrap workshop archive with build logs, parts lists, and project cards." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">Scionexus</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="lab.html">Lab</a>
-      <a href="explore.html">Explore</a>
-      <a href="scrap.html">Scrap</a>
-      <a href="shop.html">Shop</a>
-    </nav>
-  </header>
-
-  <main class="page">
-    <section class="section">
-      <h1>Scrap</h1>
-      <p class="lead">Use this page for quick notes, rough ideas, and anything you do not want on the main pages yet.</p>
-      <div class="grid">
-        <article class="card"><h3>Drafts</h3><p>Keep unfinished content in one place.</p></article>
-        <article class="card"><h3>Ideas</h3><p>Store concepts before turning them into pages.</p></article>
-        <article class="card"><h3>Links</h3><p>Save useful resources or references.</p></article>
-      </div>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="bg" aria-hidden="true"><div class="bg__grid"></div><div class="bg__scan"></div><div class="bg__nodes"></div></div>
+  <header class="chrome"><div class="chrome__brand"><div class="logo-mark" aria-hidden="true">S</div><div><div class="chrome__name">SCIONEXUS</div><div class="chrome__sub">WORKSHOP ARCHIVE</div></div></div><a class="chrome__meta mono" href="index.html">RETURN TO CORE</a></header>
+  <main id="content" class="page">
+    <section class="page__hero panel"><div><div class="kicker mono">BUILD ARCHIVES</div><h1>SCRAP</h1><p class="lede">A digital engineering notebook for ESP32 builds, vehicles, electronics, reverse engineering, 3D printing, PCB work, and DIY tutorials.</p></div><div class="panel__badge mono">/archive/scrap</div></section>
+    <section class="grid grid--projects">
+      <article class="panel project-card"><div class="project-card__top mono">ESP32 / ELECTRONICS</div><h3>Telemetry Node</h3><p>Difficulty: Medium • Cost: Low • Status: Active</p><div class="project-card__meta mono">PARTS • DOWNLOADS • GALLERY</div></article>
+      <article class="panel project-card"><div class="project-card__top mono">VEHICLE / DIY</div><h3>Field Rover</h3><p>Difficulty: High • Cost: Medium • Status: Prototype</p><div class="project-card__meta mono">BUILD SHEETS • SPECS • IMAGES</div></article>
+      <article class="panel project-card"><div class="project-card__top mono">PCB / DESIGN</div><h3>Control Board</h3><p>Difficulty: High • Cost: Medium • Status: In Review</p><div class="project-card__meta mono">GERBERS • BOM • NOTES</div></article>
+      <article class="panel project-card"><div class="project-card__top mono">3D PRINT / TOOLS</div><h3>Instrument Mount</h3><p>Difficulty: Low • Cost: Low • Status: Ready</p><div class="project-card__meta mono">STL • PARTS • ASSEMBLY</div></article>
     </section>
   </main>
-
-  <footer class="footer">
-    <p>© 2026 Scionexus</p>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
