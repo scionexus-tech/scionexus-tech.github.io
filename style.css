@@ -23,11 +23,43 @@ a{color:inherit;text-decoration:none}
 .hub__topline,.hub__footer{display:flex;justify-content:space-between;gap:1rem;align-items:center}
 .hub__topline{color:rgba(255,255,255,.7);font-size:.8rem;padding:.6rem .8rem 1rem}
 .radial{position:relative;aspect-ratio:1/1;width:min(760px,92vw);margin:0 auto;display:grid;place-items:center}
-.radial__core{width:min(300px,42vw);height:min(300px,42vw);border-radius:50%;border:1px solid rgba(255,255,0,.5);box-shadow:0 0 30px rgba(255,255,0,.12),inset 0 0 50px rgba(0,255,255,.05);background:radial-gradient(circle at 50% 35%,rgba(0,255,255,.12),rgba(0,0,0,.15) 58%,rgba(0,0,0,.6) 100%);display:grid;place-items:center;text-align:center;padding:1.2rem;position:relative;z-index:2}
-.radial__core-inner{max-width:24rem}
+.radial__core {
+  width: min(300px, 42vw);
+  height: min(300px, 42vw);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,0,.5);
+  box-shadow: 0 0 30px rgba(255,255,0,.12), inset 0 0 50px rgba(0,255,255,.05);
+  background: radial-gradient(circle at 50% 35%, rgba(0,255,255,.12), rgba(0,0,0,.15) 58%, rgba(0,0,0,.6) 100%);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.radial__core-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(24rem, 85%);
+  gap: 0.5rem;
+}
 .radial__sig{color:#ff0;font-size:.85rem}
-.radial__title{margin:.5rem 0 .75rem;font-size:clamp(1.5rem,3vw,2.8rem);line-height:1.05;letter-spacing:.08em}
-.radial__copy{margin:0;color:rgba(255,255,255,.82);font-size:1rem}
+.radial__title {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 2.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+}
+
+.radial__copy {
+  margin: 0;
+  max-width: 22rem;
+  color: rgba(255,255,255,.82);
+  font-size: 1rem;
+}
 .radial__hint{margin-top:1rem;color:#ff0}
 .module{position:absolute;width:clamp(132px,15vw,190px);height:clamp(132px,15vw,190px);border-radius:50%;border:1px solid rgba(0,255,255,.35);background:radial-gradient(circle at 35% 30%,rgba(0,255,255,.18),rgba(255,255,255,.03) 40%,rgba(0,0,0,.3) 100%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,filter .25s ease}
 .module:hover,.module:focus-visible,.module.is-active{transform:scale(1.05);box-shadow:0 0 30px rgba(0,255,255,.22),0 0 42px rgba(255,255,0,.15);border-color:#ff0;outline:none}
