@@ -3,74 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scionexus | Home</title>
-  <meta name="description" content="Scionexus is a modern, responsive website built for GitHub Pages." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Scionexus | Core Interface</title>
+  <meta name="description" content="Scionexus is an immersive science and engineering command interface built for GitHub Pages." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">Scionexus</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="lab.html">Lab</a>
-      <a href="explore.html">Explore</a>
-      <a href="scrap.html">Scrap</a>
-      <a href="shop.html">Shop</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__panel" role="status" aria-live="polite">
+      <div class="boot__title">INITIALIZING SCIONEXUS CORE...</div>
+      <div class="boot__log" id="bootLog">
+        <span>Loading Research Archive...</span>
+        <span>Loading Build Database...</span>
+        <span>Loading Knowledge Library...</span>
+        <span>Connecting Video Feed...</span>
+        <span>Synchronizing Systems...</span>
+      </div>
+      <div class="boot__status" id="bootStatus">SYSTEM ONLINE</div>
+      <button class="boot__skip" id="bootSkip" type="button">SKIP BOOT</button>
+    </div>
+  </div>
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__scan"></div>
+    <div class="bg__nodes"></div>
+  </div>
+
+  <header class="chrome">
+    <div class="chrome__brand">
+      <div class="logo-mark" aria-hidden="true">S</div>
+      <div>
+        <div class="chrome__name">SCIONEXUS</div>
+        <div class="chrome__sub">SCIENCE • ENGINEERING • DISCOVERY</div>
+      </div>
+    </div>
+    <div class="chrome__meta mono">CORE / v1.0 / LIVE</div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">A full static website</p>
-        <h1>Build a clean, modern experience with Scionexus.</h1>
-        <p class="lead">This starter includes multiple pages, a shared stylesheet, and a small JavaScript file for mobile navigation.</p>
-        <div class="actions">
-          <a class="btn primary" href="explore.html">Explore the site</a>
-          <a class="btn secondary" href="shop.html">Visit the shop</a>
+  <main id="main" class="shell">
+    <section class="hub" aria-label="Scionexus command hub">
+      <div class="hub__frame">
+        <div class="hub__topline mono">
+          <span>ACCESS LEVEL: PUBLIC</span>
+          <span id="sessionState">SESSION: COLD START</span>
+        </div>
+
+        <div class="radial" id="radial" role="navigation" aria-label="Primary modules">
+          <div class="radial__core" aria-label="Scionexus core">
+            <div class="radial__core-inner">
+              <div class="radial__sig mono">SCIONEXUS</div>
+              <h1 class="radial__title">FUTURE KNOWLEDGE INTERFACE</h1>
+              <p class="radial__copy">An operating environment for science, engineering, electronics, space, Linux, robotics, reverse engineering, programming, and cybersecurity.</p>
+              <div class="radial__hint mono" id="moduleHint">SELECT A MODULE</div>
+            </div>
+          </div>
+
+          <button class="module module--lab is-active" data-target="lab.html" data-title="LAB" data-desc="Digital research archive, PDFs, notes, diagrams, schematics, and technical references." aria-label="Open Lab module">
+            <span class="module__id mono">01</span><span class="module__name">LAB</span>
+          </button>
+          <button class="module module--explore" data-target="explore.html" data-title="EXPLORE" data-desc="Recent transmissions, embedded videos, and channel access." aria-label="Open Explore module">
+            <span class="module__id mono">02</span><span class="module__name">EXPLORE</span>
+          </button>
+          <button class="module module--scrap" data-target="scrap.html" data-title="SCRAP" data-desc="Workshop archive, build logs, parts lists, downloads, and engineering notebooks." aria-label="Open Scrap module">
+            <span class="module__id mono">03</span><span class="module__name">SCRAP</span>
+          </button>
+          <button class="module module--shop" data-target="shop.html" data-title="SHOP" data-desc="Equipment terminal, kits, downloads, PCB files, templates, and future storefront placeholders." aria-label="Open Shop module">
+            <span class="module__id mono">04</span><span class="module__name">SHOP</span>
+          </button>
+        </div>
+
+        <div class="hub__footer">
+          <div class="readout">
+            <div class="readout__label mono">CURRENT MODULE</div>
+            <div class="readout__value" id="activeTitle">LAB</div>
+            <div class="readout__desc" id="activeDesc">Digital research archive, PDFs, notes, diagrams, schematics, and technical references.</div>
+          </div>
+          <div class="diagnostics" aria-label="System diagnostics">
+            <div class="diag"><span class="mono">SYS</span><div class="bar"><i style="width: 84%"></i></div></div>
+            <div class="diag"><span class="mono">NET</span><div class="bar"><i style="width: 73%"></i></div></div>
+            <div class="diag"><span class="mono">ARC</span><div class="bar"><i style="width: 91%"></i></div></div>
+          </div>
         </div>
       </div>
-
-      <aside class="hero-card">
-        <h2>Included pages</h2>
-        <ul>
-          <li>Home</li>
-          <li>Lab</li>
-          <li>Explore</li>
-          <li>Scrap</li>
-          <li>Shop</li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="section">
-      <h2>What this gives you</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Responsive layout</h3>
-          <p>Works on phones, tablets, and desktops.</p>
-        </article>
-        <article class="card">
-          <h3>Shared styling</h3>
-          <p>One CSS file controls the look of every page.</p>
-        </article>
-        <article class="card">
-          <h3>Simple editing</h3>
-          <p>Replace text, links, and images without rebuilding the structure.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <h2>Next steps</h2>
-      <p>Swap in your own branding, content, and product details. Add more pages anytime by copying the same header and footer structure.</p>
     </section>
   </main>
-
-  <footer class="footer">
-    <p>© 2026 Scionexus</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
