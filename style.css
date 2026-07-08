@@ -22,10 +22,17 @@ a{color:inherit;text-decoration:none}
 .hub__frame:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 45%,rgba(255,255,0,.08) 50%,transparent 55%);opacity:.45;pointer-events:none;animation:glide 14s linear infinite}
 .hub__topline,.hub__footer{display:flex;justify-content:space-between;gap:1rem;align-items:center}
 .hub__topline{color:rgba(255,255,255,.7);font-size:.8rem;padding:.6rem .8rem 1rem}
-.radial{position:relative;aspect-ratio:1/1;width:min(760px,92vw);margin:0 auto;display:grid;place-items:center}
+.radial {
+  position: relative;
+  width: min(760px, 100%);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
 .radial__core {
-  width: min(300px, 42vw);
-  height: min(300px, 42vw);
+  width: clamp(220px, 52vw, 300px);
+  height: clamp(220px, 52vw, 300px);
   border-radius: 50%;
   border: 1px solid rgba(255,255,0,.5);
   box-shadow: 0 0 30px rgba(255,255,0,.12), inset 0 0 50px rgba(0,255,255,.05);
@@ -37,7 +44,6 @@ a{color:inherit;text-decoration:none}
   position: relative;
   z-index: 2;
 }
-
 .radial__core-inner {
   display: flex;
   flex-direction: column;
@@ -53,7 +59,6 @@ a{color:inherit;text-decoration:none}
   line-height: 0.95;
   letter-spacing: 0.08em;
 }
-
 .radial__copy {
   margin: 0;
   max-width: 22rem;
@@ -61,7 +66,22 @@ a{color:inherit;text-decoration:none}
   font-size: 1rem;
 }
 .radial__hint{margin-top:1rem;color:#ff0}
-.module{position:absolute;width:clamp(132px,15vw,190px);height:clamp(132px,15vw,190px);border-radius:50%;border:1px solid rgba(0,255,255,.35);background:radial-gradient(circle at 35% 30%,rgba(0,255,255,.18),rgba(255,255,255,.03) 40%,rgba(0,0,0,.3) 100%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,filter .25s ease}
+.module {
+  position: absolute;
+  width: clamp(92px, 24vw, 190px);
+  height: clamp(92px, 24vw, 190px);
+  border-radius: 50%;
+  border: 1px solid rgba(0,255,255,.35);
+  background: radial-gradient(circle at 35% 30%, rgba(0,255,255,.18), rgba(255,255,255,.03) 40%, rgba(0,0,0,.3) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, filter .25s ease;
+}
 .module:hover,.module:focus-visible,.module.is-active{transform:scale(1.05);box-shadow:0 0 30px rgba(0,255,255,.22),0 0 42px rgba(255,255,0,.15);border-color:#ff0;outline:none}
 .module__id{color:#ff0;font-size:.75rem}
 .module__name{font-size:1.15rem;font-weight:800;letter-spacing:.14em}
@@ -129,4 +149,100 @@ a{color:inherit;text-decoration:none}
   .module--shop{left:0}
   .module--explore{right:0}
   .page,.shell{padding:1rem}
+}
+
+@media (max-width: 680px) {
+  .chrome {
+    padding: .85rem 1rem;
+  }
+
+  .chrome__sub {
+    display: none;
+  }
+
+  .shell,
+  .page {
+    padding: 1rem;
+  }
+
+  .hub {
+    min-height: auto;
+    padding-top: 1rem;
+  }
+
+  .hub__frame {
+    padding: .75rem;
+    border-radius: 20px;
+  }
+
+  .hub__topline,
+  .hub__footer,
+  .page__hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .radial {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: auto;
+    min-height: 640px;
+  }
+
+  .radial__core {
+    width: clamp(210px, 66vw, 260px);
+    height: clamp(210px, 66vw, 260px);
+  }
+
+  .radial__title {
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+  }
+
+  .radial__copy {
+    font-size: .92rem;
+  }
+
+  .module--lab {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .module--explore {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .module--scrap {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .module--shop {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .module {
+    width: 88px;
+    height: 88px;
+  }
+
+  .module__name {
+    font-size: .92rem;
+  }
+
+  .grid--labs,
+  .grid--videos,
+  .grid--projects,
+  .grid--shop {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostics {
+    min-width: 100%;
+  }
 }
