@@ -13,5 +13,3 @@ Static GitHub Pages site built with HTML, CSS, and vanilla JavaScript.
 
 ## Notes
 - This site uses relative links for GitHub Pages compatibility.
-
--Tyny
