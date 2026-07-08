@@ -3,39 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scionexus | Lab</title>
-  <meta name="description" content="The Scionexus lab page for experiments, updates, and ideas." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Scionexus | Lab Archive</title>
+  <meta name="description" content="Scionexus Lab archive with technical notes, downloads, schematics, and reference categories." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">Scionexus</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="lab.html">Lab</a>
-      <a href="explore.html">Explore</a>
-      <a href="scrap.html">Scrap</a>
-      <a href="shop.html">Shop</a>
-    </nav>
-  </header>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="bg" aria-hidden="true"><div class="bg__grid"></div><div class="bg__scan"></div><div class="bg__nodes"></div></div>
+  <header class="chrome"><div class="chrome__brand"><div class="logo-mark" aria-hidden="true">S</div><div><div class="chrome__name">SCIONEXUS</div><div class="chrome__sub">LAB ARCHIVE</div></div></div><a class="chrome__meta mono" href="index.html">RETURN TO CORE</a></header>
+  <main id="content" class="page">
+    <section class="page__hero panel">
+      <div>
+        <div class="kicker mono">DIGITAL RESEARCH ARCHIVE</div>
+        <h1>LAB</h1>
+        <p class="lede">Structured like a futuristic file system for PDFs, diagrams, notes, references, schematics, and blueprints.</p>
+      </div>
+      <div class="panel__badge mono">/archive/lab</div>
+    </section>
 
-  <main class="page">
-    <section class="section">
-      <h1>Lab</h1>
-      <p class="lead">Use this page for experiments, progress updates, or behind-the-scenes content.</p>
-      <div class="grid">
-        <article class="card"><h3>Prototype</h3><p>Test new ideas before adding them to the main site.</p></article>
-        <article class="card"><h3>Notes</h3><p>Track changes, releases, or design decisions.</p></article>
-        <article class="card"><h3>Build log</h3><p>Share what is being developed next.</p></article>
+    <section class="panel section-block">
+      <h2>Categories</h2>
+      <div class="tag-grid mono" aria-label="Lab categories">
+        <span>PHYSICS</span><span>ELECTRICITY</span><span>NETWORKING</span><span>LINUX</span><span>PROGRAMMING</span><span>EMBEDDED SYSTEMS</span><span>AI</span><span>ELECTRONICS</span><span>ROBOTICS</span><span>CYBERSECURITY</span>
       </div>
     </section>
+
+    <section class="grid grid--labs">
+      <article class="panel file-card"><div class="file-card__top mono">PDF / NOTEBOOK</div><h3>Reference Deck A</h3><p>Foundations, formulas, and quick technical notes for study sessions.</p><div class="file-card__bottom mono">DOWNLOAD • 18 MB</div></article>
+      <article class="panel file-card"><div class="file-card__top mono">SCHEMATIC / DIAGRAM</div><h3>Signal Flow Charts</h3><p>Block diagrams, wiring paths, and labeled systems views.</p><div class="file-card__bottom mono">VIEW FILE</div></article>
+      <article class="panel file-card"><div class="file-card__top mono">BLUEPRINT / DOC</div><h3>Build Manuals</h3><p>Futuristic work instructions for labs, tools, and prototypes.</p><div class="file-card__bottom mono">OPEN ARCHIVE</div></article>
+      <article class="panel file-card"><div class="file-card__top mono">SOURCE / README</div><h3>Technical Notes</h3><p>Concise documentation for electronics, coding, and devices.</p><div class="file-card__bottom mono">TEXT / MARKDOWN</div></article>
+    </section>
   </main>
-
-  <footer class="footer">
-    <p>© 2026 Scionexus</p>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
